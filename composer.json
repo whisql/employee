@@ -1,0 +1,19 @@
+{
+  "name": "pgolubev/gas",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  },
+  "authors": [
+    {
+      "name": "whisql",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+  }
+}
