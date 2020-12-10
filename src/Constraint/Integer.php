@@ -4,7 +4,7 @@
 namespace App\Constraint;
 
 
-class NotBlank implements ConstraintInterface
+class Integer implements ConstraintInterface
 {
     private $is_valid = true;
     private $error_message;
@@ -16,13 +16,12 @@ class NotBlank implements ConstraintInterface
             return;
         }
 
-        $this->error_message = sprintf('Empty value');
+        $this->error_message = sprintf('Value is not integer');
     }
-
 
     public function validate($value)
     {
-        if(empty($value)) $this->is_valid = false;
+        if(!is_int($value)) $this->is_valid = false;
     }
 
     public function isValid(): bool

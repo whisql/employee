@@ -64,11 +64,11 @@ class EmployeeManager implements SubscriberInterface
         $employee = $this->commandBus->execute($command);
 
         if(!$employee instanceof Employee){
-            throw new \Exception('CommandHandler return');
+            throw new \Exception('CreateEmployeeHandler class must be return an instance of Employee');
         }
 
         if(!$this->employeeRepository->add($employee)){
-            throw new \Exception('написать');
+            throw new \Exception('Ошибка при записи');
         }
         $data = $employee->toArray();
 

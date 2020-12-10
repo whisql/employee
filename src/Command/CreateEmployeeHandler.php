@@ -15,7 +15,7 @@ class CreateEmployeeHandler implements CommandHandlerInterface
     public function handle($command)
     {
         if(!$command instanceof CreateEmployeeCommand) {
-            throw new CommandClassException('Command class must be instance of CreateEmployeeCommand');
+            throw new CommandClassException('Command class must be an instance of CreateEmployeeCommand');
         }
 
         $employee = new Employee();
