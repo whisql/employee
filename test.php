@@ -17,7 +17,7 @@ $employeeManager = new \App\EmployeeManager($repo, $mainBus,$eventDispatcher);
 $eventDispatcher->attach($employeeManager,'validator:errors');
 
 $employeeManager->createEmployee(
-    '`Ivan`',
+    'Ivan',
     'Ivanov',
     'Ivanovich',
     'Russia',
